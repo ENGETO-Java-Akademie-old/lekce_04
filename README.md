@@ -16,15 +16,19 @@
  
 ## Co nás čeká
 
-- Podmínky pomocí `switch`
+- [Vícerozměrné pole](#více-rozměrné-pole)
+- [Klíčová slova break a continue](#klíčová-slova-break-a-continue)
+- [Větvení pomocí switch](#větvení-pomocí-switch)
+- [Switch pomocí výrazů (Switch Expression)](#switch-pomocí-výrazů-switch-expression)
+
+- [Vysvětlení Big O notace]()
+
 - Úvod do OOP (Objektově orientovaného programování)
 -- Principy OOP
 -- Abstraktní třída,
 -- Interface
--- Generika
-- Pokračování Kolekcí
--- Vysvětlení Big O notace
--- Kolekce, List, Set(Množina), Queue(Fronta)
+
+
 
 ## Pokračování polí
 
@@ -289,3 +293,82 @@ Napište program, který na základě ročního období vypíše jiný text a na
 ```
 enum RocniObdobi {JARO, LETO, PODZIM, ZIMA}
 ```
+
+## Big O notace (Landauova notace)
+
+Jedna z důležitých věcí k pochopení proč nekteré věci nefungují rychle nebo padají na `OutOfMemoryError` je pochopení komplexity algoritmů resp. jejich asymptotické chování.
+
+### O(1) - konstantní čas
+```
+boolean IsFirstElementNull(List<string> elements)
+{
+    return elements[0] == null;
+}
+```
+
+### O(logN) - lineární čas
+
+Binary Search
+
+### O(N) - lineární čas
+
+
+```
+boolean containsValue(List<string> elements, String value)
+{
+    foreach (String element : elements)
+    {
+        if (element == value) return true;
+    }
+    
+    return false;
+}
+```
+
+### O(N^2) - kvadratický čas
+```
+bool ContainsDuplicates(IList<string> elements)
+{
+    for (var outer = 0; outer < elements.Count; outer++)
+    {
+        for (var inner = 0; inner < elements.Count; inner++)
+        {
+            // Don't compare with self
+            if (outer == inner) continue;
+
+            if (elements[outer] == elements[inner]) return true;
+        }
+    }
+
+    return false;
+}
+```
+### O(2^N) - exponenciální čas
+
+```
+int Fibonacci(int number)
+{
+    if (number <= 1) return number;
+
+    return Fibonacci(number - 2) + Fibonacci(number - 1);
+}
+```
+
+#### Příklady bežných algoritmů (výpočetní náročnost):
+- Constant O(1) - value lookup
+-  Logarithmic algorithm – O(logn) – Binary Search
+-  Linear algorithm – O(n) – Linear Search
+- Superlinear algorithm – O(nlogn) – Heap Sort, Merge Sort
+- Polynomial algorithm – O(n^c) – Strassen’s Matrix Multiplication, Bubble Sort, Selection Sort, Insertion Sort, Bucket Sort
+- Exponential algorithm – O(c^n) – Tower of Hanoi
+- Factorial algorithm – O(n!) – Determinant Expansion by Minors, Brute force Search algorithm for Traveling Salesman Problem.
+
+#### Příklady bežných algoritmů (paměťová náročnost):
+- Ideal algorithm - O(1) - Linear Search, Binary Search
+    Bubble Sort, Selection Sort, Insertion Sort, Heap Sort, Shell Sort
+- Logarithmic algorithm - O(log n) - Merge Sort
+- Linear algorithm - O(n) - Quick Sort
+- Sub-linear algorithm - O(n+k) - Radix Sort
+
+### K prostudování k kolekcí (pokračování v dalších lekcích)
+https://www.bigocheatsheet.com/
