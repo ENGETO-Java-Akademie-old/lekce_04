@@ -21,13 +21,9 @@
 - [Větvení pomocí switch](#větvení-pomocí-switch)
 - [Switch pomocí výrazů (Switch Expression)](#switch-pomocí-výrazů-switch-expression)
 
-- [Vysvětlení Big O notace]()
+- [Vysvětlení Big O notace](#big-o-notace-landauova-notace)
 
-- Úvod do OOP (Objektově orientovaného programování)
--- Principy OOP
--- Abstraktní třída,
--- Interface
-
+- [Úvod do OOP (Objektově orientovaného programování)]()
 
 
 ## Pokračování polí
@@ -372,3 +368,7 @@ int Fibonacci(int number)
 
 ### K prostudování k kolekcí (pokračování v dalších lekcích)
 https://www.bigocheatsheet.com/
+
+## Úvod do OOP
+
+
