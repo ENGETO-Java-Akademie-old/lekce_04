@@ -20,11 +20,8 @@
 - [Klíčová slova break a continue](#klíčová-slova-break-a-continue)
 - [Větvení pomocí switch](#větvení-pomocí-switch)
 - [Switch pomocí výrazů (Switch Expression)](#switch-pomocí-výrazů-switch-expression)
-
 - [Vysvětlení Big O notace](#big-o-notace-landauova-notace)
-
-- [Úvod do OOP (Objektově orientovaného programování)]()
-
+- [Úvod do OOP (Objektově orientovaného programování)](#úvod-do-oop)
 
 ## Pokračování polí
 
@@ -371,4 +368,6 @@ https://www.bigocheatsheet.com/
 
 ## Úvod do OOP
 
-
+-- Principy OOP
+-- Abstraktní třída,
+-- Interface
